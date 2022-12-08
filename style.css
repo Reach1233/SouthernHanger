@@ -1,0 +1,480 @@
+/* Pop Up Side Menu */
+	.sidenav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	transition: 0.6s;
+	padding-top: 60px;
+	white-space: no-wrap;
+	}
+
+	.sidenav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+	}
+
+	.sidenav a:hover {
+	color: #f1f1f1;
+	}
+
+	.sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+	}
+
+	#main {
+	transition: margin-left 0.5s;
+	padding: 16px;
+	position: sticky;
+	top: 20px;
+  right: 10000px;
+	}
+
+	@media screen and (max-height: 450px) {
+	.sidenav { padding-top: 15px; }
+	.sidenav a { font-size: 18px; }
+	}
+  
+/* Style the body and sets the cursor style */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  cursor: url("https://www.doggonegoodglynn.dog/paw.svg") 16.5 16.5, auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url("https://deterioratingsanity.github.io/homepage/alt1.png");
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Lato", sans-serif;
+  width: 70vw;
+  text-align: center;
+  position: relative;
+}
+
+/* Sets the styles of the main background div */
+#WE {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+  background-color: rgba(100, 100, 100, 0.5);
+  border-radius: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#earth {
+  border-style: solid;
+  border-radius: 25px;
+  border-width: 15px;
+  border-color: black;
+  }
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(66, 158, 157);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #fffdd0;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1em 0;
+}
+
+.cursor {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--width);
+  height: var(--height);
+  transform: translate(calc(var(--x) - var(--width) / 2),
+      calc(var(--y) - var(--height) / 2));
+  transition-duration: 0.1s;
+  transition-timing-function: cubic-bezier(0.25, 0.25, 0.42, 1);
+  transition-property: width, height, transform;
+  z-index: 1;
+  pointer-events: none;
+  will-change: transform;
+  @media (pointer: fine) {
+    display: block;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: var(--radius);
+    border: 2px solid hsl(160, 55, 45);
+    opacity: var(--scale);
+    transform: scale(var(--scale));
+    transition: 0.3s cubic-bezier(0.25, 0.25, 0.42, 1) opacity,
+      0.3s cubic-bezier(0.25, 0.25, 0.42, 1) transform,
+      0.1s cubic-bezier(0.25, 0.25, 0.42, 1) border-radius;
+  }
+}
+
+body:not(body:hover) .cursor::after {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1em;
+  width: var(--size);
+  height: var(--size);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 100%;
+}
+
+.button {
+  appearance: none;
+  border: none;
+  color: white;
+  cursor: inherit;
+  padding: 0.5em 1em;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+img{
+  width: 100px;
+  height: 100px;
+}
+.WE {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5em;
+
+}
+.WE button{
+	margin-left: 12.5px;
+	margin-right: 12.5px;
+}
+.button {
+  --offset: 10px;
+  --border-size: 2px;
+  display: block;
+  position: relative;
+  padding: 1.5em 3em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 0;
+  box-shadow: inset 0 0 0 var(--border-size) currentcolor;
+  transition: background 0.8s ease;
+  animation: textAnimate 3s linear infinite alternate;
+}
+.button:hover {
+  background: rgba(100, 0, 0, 0.03);
+}
+
+.button__horizontal, .button__vertical {
+  position: absolute;
+  top: var(--horizontal-offset, 0);
+  right: var(--vertical-offset, 0);
+  bottom: var(--horizontal-offset, 0);
+  left: var(--vertical-offset, 0);
+  transition: transform 0.8s ease;
+  will-change: transform;
+}
+.button__horizontal::before, .button__vertical::before {
+  content: "";
+  position: absolute;
+  border: inherit;
+}
+.button__horizontal {
+  --vertical-offset: calc(var(--offset) * -1);
+  border-top: var(--border-size) solid currentcolor;
+  border-bottom: var(--border-size) solid currentcolor;
+  transform: scaleX(0);
+}
+.button__horizontal::before {
+  top: calc(var(--vertical-offset) - var(--border-size));
+  bottom: calc(var(--vertical-offset) - var(--border-size));
+  left: calc(var(--vertical-offset) * -1);
+  right: calc(var(--vertical-offset) * -1);
+}
+.button:hover .button__horizontal {
+  transform: scaleX(1);
+}
+.button__vertical {
+  --horizontal-offset: calc(var(--offset) * -1);
+  border-left: var(--border-size) solid currentcolor;
+  border-right: var(--border-size) solid currentcolor;
+  transform: scaleY(0);
+}
+.button__vertical::before {
+  top: calc(var(--horizontal-offset) * -1);
+  bottom: calc(var(--horizontal-offset) * -1);
+  left: calc(var(--horizontal-offset) - var(--border-size));
+  right: calc(var(--horizontal-offset) - var(--border-size));
+}
+.button:hover .button__vertical {
+  transform: scaleY(1);
+}
+.buttonHolder{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+	align-items: center;
+  margin: auto;
+  z-index: 1;
+  width: 20em;
+  max-width: 70%;
+  padding: 10px;
+  border-top: 2px solid #70615d;
+  border-bottom: 2px solid #70615d;
+  transition: 0.8s ease;
+}
+ 
+ /* Modal stuff */
+.modal{
+  display: none;
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(71, 59, 56, 0.4);
+}
+.modalContent{
+  background-color: #FDF8F2;
+  margin: 15% auto;
+  padding: 20px;
+  border: 2px solid #473B38;
+  width: 80%;
+  box-shadow: 0 0 60px #473B38;
+}
+.modalStuff{
+  padding: 1em;
+  border-right: 2px solid #473B38;
+  border-left: 2px solid #473B38;
+}
+
+/* Modal close */
+.close{
+  color: #818181;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  transition: 0.5s;
+  background-color: #FDF8F2;
+}
+.close:hover, .close:focus{
+  color: #70615d;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* day night cycle */
+#time{
+  width: 70vw;
+  text-align: center;
+  position: relative;
+}
+#silhouette{
+  width: 100%;
+  height: auto;
+  margin-bottom: -1%;
+}
+#title{
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Segoe Script", cursive;
+  color: white;
+  font-size: 3em;
+  width: 100%;
+  font-style: italic;
+  text-shadow: 0 0 10px black;
+}
+
+/* Logo Style */
+#finte{
+  width: 600px;
+  height: 600px;
+}
+ #displayFirst{
+
+
+
+
+   background-image: url(./walk.jpeg);
+
+
+			background-position: center;
+
+
+			background-repeat: no-repeat;
+
+
+			background-size: cover;
+
+
+ }
+
+
+ #displaySecond{
+
+
+   background-image: url(./walk2.jpeg);
+
+
+			background-position: center;
+
+
+			background-repeat: no-repeat;
+
+
+			background-size: cover;
+
+
+ }
+
+
+ #displayThird{
+
+
+   background-image: url(./walk3.jpeg);
+
+
+			background-position: center;
+
+
+			background-repeat: no-repeat;
+
+
+			background-size: cover;
+
+
+ }
+
+
+ .gallery {
+
+
+   top:22vh;
+
+
+ }
+
+
+
+
+
+
+
+ .gallery-cell {
+
+
+   position:relative;
+
+
+   height:50vh;
+
+
+   width:50vw;
+
+
+   margin:auto;
+
+
+   background-color: white;
+
+
+   border-radius: var(--radius-4);
+
+
+   box-shadow: var(--shadow-4);  /* inner-shadow? */
+
+
+   font-family:var(--font-sans);
+
+
+   margin:30px;
+
+
+ }
+
+
+
+
+
+
+
+ /* cell number */
+
+
+ .gallery-cell:before {
+
+
+   display: block;
+
+
+   text-align: center;
+
+
+   line-height: 200px;
+
+
+   font-size: 80px;
+
+
+   color: white;
+
+
+ }
