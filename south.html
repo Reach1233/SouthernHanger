@@ -1,0 +1,65 @@
+<head>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+</head>
+<body>
+<div class="cursor"></div>
+<div id="main">
+  <span style="font-size:30px;cursor:pointer" onclick="toggleNav()">&#9776;</span>
+</div>
+<div id="WE">
+<img id="finte" src="https://reach1233.github.io/THESECONDTEST/AHHHH-removebg-preview.png">
+</div>
+<div id="time">
+<!--<img id="silhouette" src="#" alt="silhouette of the sidney lanier bridge">-->
+<div id="mySidenav" class="sidenav tooltip">
+  <div class="WE">
+    <button type="button" class="button" onclick="bikeModal()">
+      About Us
+      <div class="button__horizontal"></div>
+      <div class="button__vertical"></div>
+    </button>
+    </div>
+     <div class="WE">
+      <button type="button" class="button" onclick="contactModal()">
+      Contact
+      <div class="button__horizontal"></div>
+      <div class="button__vertical"></div>
+    </button>
+     </div>
+   <div id="modalBox" class="modal">
+   <!DOCTYPE html>
+     <html>
+     <div class="modalContent">
+   <span id="close" onclick="closeModal()">&times;</span>
+   <p class="modalStuff">
+   1412 Newcastle Street<br>
+Brunswick, Georgia 31520<br>
+Mon - Sat 10am - 7pm
+   </p>
+   </div>
+   </div>
+   <div id="modalBox2" class="modal">
+   <span id="close" onclick="closeModal()">&times;</span>
+   </div>
+   </div>
+   <div class="gallery js-flickity"
+
+	  					data-flickity-options='{ "wrapAround": true }'>
+
+
+					  <div class="gallery-cell" id="displayFirst">
+					  </div>
+
+
+					  <div class="gallery-cell" id="displaySecond"></div>
+
+
+					  <div class="gallery-cell" id="displayThird"></div>
+
+
+					</div>
+
+
+</body>
+  </html>
