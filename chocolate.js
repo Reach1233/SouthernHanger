@@ -1,4 +1,4 @@
-//modal
+/*modal
 var modal = document.getElementById("modalBox");
 
 var modaltwo = document.getElementById("modalBox2");
@@ -182,7 +182,7 @@ var time = new Date("January 1, 0001 10:00:00");
 var hours = time.getHours();
 
 //console.log(hours); /*checker*/
-
+/*
 var hourCol = [
 "https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bmlnaHQlMjBza3l8ZW58MHx8MHx8&w=1000&q=80", 
 "https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bmlnaHQlMjBza3l8ZW58MHx8MHx8&w=1000&q=80", 
@@ -191,12 +191,12 @@ var hourCol = [
 "https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bmlnaHQlMjBza3l8ZW58MHx8MHx8&w=1000&q=80", 
 "https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bmlnaHQlMjBza3l8ZW58MHx8MHx8&w=1000&q=80", 
 "https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bmlnaHQlMjBza3l8ZW58MHx8MHx8&w=1000&q=80", 
-/*7*/"https://images.unsplash.com/photo-1560093230-101306845069?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c3VucmlzZSUyMHNreXxlbnwwfHwwfHw%3D&w=1000&q=80", 
+/*7*//*"https://images.unsplash.com/photo-1560093230-101306845069?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c3VucmlzZSUyMHNreXxlbnwwfHwwfHw%3D&w=1000&q=80", 
 "https://images.unsplash.com/photo-1600262912274-28f333fa17bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bW9ybmluZyUyMHNreXxlbnwwfHwwfHw%3D&w=1000&q=80", 
 "	https://images.unsplash.com/photo-1600262912274-28f333fa17bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bW9ybmluZyUyMHNreXxlbnwwfHwwfHw%3D&w=1000&q=80", 
 "	https://images.unsplash.com/photo-1600262912274-28f333fa17bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bW9ybmluZyUyMHNreXxlbnwwfHwwfHw%3D&w=1000&q=80", 
 "	https://images.pexels.com/photos/53594/blue-clouds-day-fluffy-53594.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", 
-/*12*/"https://images.pexels.com/photos/53594/blue-clouds-day-fluffy-53594.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", 
+/*12*//*"https://images.pexels.com/photos/53594/blue-clouds-day-fluffy-53594.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", 
 "	https://images.pexels.com/photos/53594/blue-clouds-day-fluffy-53594.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", 
 "	https://images.pexels.com/photos/96622/pexels-photo-96622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", 
 "	https://images.pexels.com/photos/96622/pexels-photo-96622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", 
